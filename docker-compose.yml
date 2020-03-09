@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  selenoid:
+    container_name: composed-selenoid
+    image: "aerokube/selenoid:latest"
+    environment:
+      - TZ=America/New_York
+    network_mode: bridge
+    ports:
+      - "4444:4444"
+    command: ["-retry-count", "5", "-limit", "${CONCURRENT_SESSIONS:-7}", "-session-attempt-timeout", "2m", "-service-startup-timeout", "2m"]
+    volumes:
+      - "$PWD:/etc/selenoid/" # assumed current dir contains browsers.json
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  selenoid-ui:
+    container_name: composed-selenoid-ui
+    image: "aerokube/selenoid-ui:latest"
+    environment:
+      - TZ=America/New_York
+    depends_on:
+      - selenoid
+    network_mode: bridge
+    links:
+      - selenoid
+    ports:
+      - "4445:8080"
+    command: ["--selenoid-uri", "http://selenoid:4444"]
+
+  tests:
+    container_name: composed-tests
+    image: maven:latest
+    environment:
+      - TZ=America/New_York
+    depends_on:
+      - selenoid
+      - selenoid-ui
+    working_dir: /usr/src/mymaven
+    network_mode: bridge
+    links:
+      - selenoid
+    volumes:
+      - "$PWD:/usr/src/mymaven"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "$HOME/.m2:/root/.m2"
