@@ -23,7 +23,7 @@ public class Header extends ModernBasePage {
         getWait().until(visibilityOfElementLocated(CART_LINK));
     }
 
-    @And("^Cart contains '(.*)' item on Header$")
+    @And("^Cart contains '(.*)' items on Header$")
     public void verifyCartSize(String amount) {
         assertElementText(CART_SIZE_FIELD, amount);
     }
