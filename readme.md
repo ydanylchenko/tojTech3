@@ -1,4 +1,4 @@
-### Intro What's up
+### Intro
 This is selenium based UI test automation framework for both member and recruiter sides.
 
 ### Environment Setup
