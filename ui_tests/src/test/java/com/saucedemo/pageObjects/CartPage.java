@@ -40,7 +40,7 @@ public class CartPage extends ModernBasePage {
         assertElementText(HEADER_FIELD, "Your Cart");
     }
 
-    @Given("^I am on Recruiters start page$")
+    @Given("^I am on Cart page$")
     public void verifyIsPageOpened() {
         waitForOpen();
     }
