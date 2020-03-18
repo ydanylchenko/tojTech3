@@ -9,7 +9,7 @@ Feature: Purchase
   @purchase
   Scenario Outline: Purchase '<product>' product
     When I click 'ADD TO CART' button on '<product>' product on Products page
-    Then Cart contains '1' item on Header
+    Then Cart contains '1' items on Header
     And I click on cart icon on Header
     And The following products are available on Cart page:
       | quantity | product   | description   | price   |
