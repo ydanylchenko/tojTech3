@@ -15,7 +15,7 @@ Feature: Purchase
       | quantity | product   | description   | price   |
       | 1        | <product> | <description> | <price> |
     And I click 'Checkout' button on Cart page
-    And I set 'John' as first name on Checkout your information page
+    And I set 'Elise' as first name on Checkout your information page
     And I set 'Smith' as last name on Checkout your information page
     And I set '11235' as zip on Checkout your information page
     And I click 'Continue' button on Checkout your information page
