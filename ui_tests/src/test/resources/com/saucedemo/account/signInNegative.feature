@@ -39,7 +39,7 @@ Feature: Sign In
     And   I click 'Sign In' button on Sign in page expecting failure
     Then  Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
 
-  Scenario: Sign in as standard_user but writing UPPERCASE as EXAMPLE standard_User
+  Scenario: Sign in as standard_user but writing UPPERCASE as EXAMPLE standard_User (User)
     Given I open start page
     When  I set 'standard_User' as username on Sign in page
     And   I set 'secret_sauce' as password on Sign in page
@@ -48,17 +48,9 @@ Feature: Sign In
 
 
 
-  Scenario: Sign in as problem_user but as example without under score '' problemuser ''
+  Scenario: Sign in as problem_user but as: example without under score ' problemuser '
     Given I open start page
     When  I set 'problemuser ' as username on Sign in page
-    And   I set 'secret_sauce' as password on Sign in page
-    And   I click 'Sign In' button on Sign in page expecting failure
-    Then  Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
-
-
-  Scenario: Sign in as performance_glitch_user
-    Given I open start page
-    When  I set 'performance_glitch_user ' as username on Sign in but without last word on the line 'performance_glitch_''
     And   I set 'secret_sauce' as password on Sign in page
     And   I click 'Sign In' button on Sign in page expecting failure
     Then  Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
