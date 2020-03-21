@@ -16,6 +16,7 @@ Feature: Sign In
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
 
+
   @signIn
   Scenario: Valid user sign in
     Given I open start page
