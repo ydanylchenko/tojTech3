@@ -37,7 +37,7 @@ public class SignInPage extends ModernBasePage {
     }
 
     @And("^I set '(.*)' as password on Sign in page$")
-    public void setPassword(String password) {
+    public void problem_usersetPassword(String password) {
         sendKeys(PASSWORD_INPUT, password);
     }
 
