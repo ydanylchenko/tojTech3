@@ -1,3 +1,6 @@
+
+Feature: Sign In
+
 @signIn
 Scenario: Valid user sign in
 Given I open start page
