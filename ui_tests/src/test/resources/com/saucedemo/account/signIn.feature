@@ -15,3 +15,30 @@ Feature: Sign In
     And I set 'thisIsSomeInvalidPassword' as password on Sign in page
     And I click 'Sign In' button on Sign in page expecting failure
     Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
+
+
+
+  @signIn
+  Scenario: Sign in with daniel password
+    Given I open start page
+    When I set 'daniel' as username on Sign in page
+    And I set 'thisIsSomeInvalidPassword' as password on Sign in page
+    And I click 'Sign In' button on Sign in page expecting failure
+    Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
+
+
+  @signIn
+  Scenario: Sign in with ggggg password
+    Given I open start page
+    When I set 'ggggg' as username on Sign in page
+    And I set 'thisIsSomeInvalidPassword' as password on Sign in page
+    And I click 'Sign In' button on Sign in page expecting failure
+    Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
+
+
+  Scenario: Sign in with standard password
+    Given I open start page
+    When I set 'standard' as username on Sign in page
+    And I set 'thisIsSomeInvalidPassword' as password on Sign in page
+    And I click 'Sign In' button on Sign in page expecting failure
+    Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
