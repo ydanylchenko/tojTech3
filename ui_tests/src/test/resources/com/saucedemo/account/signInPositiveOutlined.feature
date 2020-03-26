@@ -4,22 +4,14 @@ Feature: Sign In
     And I open start page
 
   @signIn
-  Scenario: Valid user sign in
-    When I set 'standard_user' as username on Sign in page
-    And I set 'secret_sauce' as password on Sign in page
+  Scenario Outline: Verify <username> user sign in with <password> password
+    When I set '<username>' as username on Sign in page
+    And I set '<password>' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
 
-  @signIn
-  Scenario: Valid user sign in
-    When I set 'problem_user' as username on Sign in page
-    And I set 'secret_sauce' as password on Sign in page
-    And I click 'Sign In' button on Sign in page
-    Then I am on Products page
-
-  @signIn
-  Scenario: Valid user sign in
-    When I set 'performance_glitch_user' as username on Sign in page
-    And I set 'secret_sauce' as password on Sign in page
-    And I click 'Sign In' button on Sign in page
-    Then I am on Products page
+    Examples:
+      | username                | password     |
+      | standard_user           | secret_sauce |
+      | problem_user            | secret_sauce |
+      | performance_glitch_user | secret_sauce |
