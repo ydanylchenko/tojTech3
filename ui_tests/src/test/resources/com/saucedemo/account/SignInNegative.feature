@@ -1,19 +1,28 @@
 Feature: Sign In with Invalid data
 
-  Background:
-    And I open start page
+  @signIn
+  Scenario: Sign In with locked_out_user
+    Given I open start page
+    When I set 'locked_out_user' as username on Sign in page
+    And I set 'secret_sauce' as password on Sign in page
+    And I click 'Sign In' button on Sign in page expecting failure
+    Then Error message 'Epic sadface: Sorry, this user has been locked out' is available on Sign in page
+
 
   @signIn
-  Scenario Outline: Invalid user sign in
-    When I set '<username>' as username on Sign in page
-    And I set '<password>' as password on Sign in page
+  Scenario: Sign In with blank password
+    Given I open start page
+    When I set 'problem_user' as username on Sign in page
+    And I set '' as password on Sign in page
     And I click 'Sign In' button on Sign in page expecting failure
-    Then Error message '<Error message>' is available on Sign in page
+    Then Error message 'Epic sadface: Password is required' is available on Sign in page
 
 
-    Examples:
-      | username        | password     | Error message                                                             |
-      | standard_user   |              | Epic sadface: Password is required                                        |
-      |                 | secret_sauce | Epic sadface: Username is required                                        |
-      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |
-      | jdhghjghgjdffh  | ghsdgfhsghfg | Epic sadface: Username and password do not match any user in this service |
+  @signIn
+  Scenario: Sign In with blank username
+    Given I open start page
+    When I set '' as username on Sign in page
+    And I set 'secret_sauce' as password on Sign in page
+    And I click 'Sign In' button on Sign in page expecting failure
+    Then Error message 'Epic sadface: Username is required' is available on Sign in page
+      
