@@ -1,7 +1,7 @@
 Feature: Sign In with Invalid data
 
   @signIn
-  Scenario:Sign In with locked_out_user
+  Scenario: Sign In with locked_out_user
     Given I open start page
     When I set 'locked_out_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
