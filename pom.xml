@@ -28,6 +28,7 @@
         <!--Dependencies-->
         <logback-classic.version>1.2.3</logback-classic.version>
         <cucumber.version>5.4.1</cucumber.version>
+        <cucumber-reporting.version>5.0.0</cucumber-reporting.version>
         <selenium.version>3.141.59</selenium.version>
         <jackson.version>2.10.2</jackson.version>
         <testng.version>7.1.0</testng.version>
@@ -61,6 +62,12 @@
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>${maven-antrun-plugin.version}</version>
                 </plugin>
+                <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+                <plugin>
+                    <groupId>net.masterthought</groupId>
+                    <artifactId>maven-cucumber-reporting</artifactId>
+                    <version>${cucumber-reporting.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -89,6 +96,12 @@
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-java</artifactId>
                 <version>${cucumber.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+            <dependency>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>${cucumber-reporting.version}</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
             <dependency>
