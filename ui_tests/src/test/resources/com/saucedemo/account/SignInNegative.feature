@@ -1,6 +1,7 @@
 Feature: Sign In with Invalid data
 
-  Background: I open start page
+  Background:
+    And I open start page
 
   @signIn
   Scenario Outline: Invalid user sign in
@@ -15,5 +16,3 @@ Feature: Sign In with Invalid data
       | standard_user   |              | Epic sadface: Password is required                  |
       |                 | secret_sauce | Epic sadface: Username is required                  |
       | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out. |
-
-      
