@@ -10,6 +10,3 @@ Feature: Click on Logout button user is redirected to Sign In page.
      And I click on menu icon on Header
      And I click 'Logout' link on Menu
      Then I am on Sign in page
-
-
-
