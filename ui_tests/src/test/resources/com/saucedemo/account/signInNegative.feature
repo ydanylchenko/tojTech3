@@ -32,7 +32,7 @@ Feature: Sign In
     Then Error message 'Epic sadface: Password is required' is available on Sign in page
 
   @signIn
-  Scenario Outline: Invalid password sign in
+  Scenario Outline: Invalid user or password sign in
     When I set '<username>' as username on Sign in page
     And I set '<password>' as password on Sign in page
     And I click 'Sign In' button on Sign in page expecting failure
