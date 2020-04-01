@@ -9,7 +9,6 @@ Feature: Sign In
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
 
-Feature: Sign In
 
   @signIn
   Scenario: Valid user sign in
@@ -20,7 +19,6 @@ Feature: Sign In
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
 
-Feature: Sign In
 
   @signIn
   Scenario: Valid user sign in
