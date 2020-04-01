@@ -1,4 +1,5 @@
 Feature: Sign In
+
   @signIn
   Scenario: Sign In with valid username and password
     Given I open start page
@@ -6,6 +7,7 @@ Feature: Sign In
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
+
   @signIn
   Scenario: Sign In with problem username and password
     Given I open start page
@@ -13,6 +15,7 @@ Feature: Sign In
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
+
   @signIn
   Scenario: Sign In with glitch username and password
     Given I open start page
@@ -20,8 +23,3 @@ Feature: Sign In
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
-
-
-
-
-
