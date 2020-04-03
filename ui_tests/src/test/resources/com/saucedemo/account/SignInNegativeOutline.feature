@@ -11,10 +11,10 @@ Feature: Sign In
     Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
 
     Examples:
-      | Username        | Password        |                                                     |
-      | Problem_user    | secret_juice    |                                                     |
-      | unusual_user    | secret_juice    |                                                     |
-      | Iamnot_user     | secret_juice    |                                                     |
-      | 111_222         | Idonot_care     |                                                     |
-      | ''              | ''              |                                                     |
-      | locked_out_user | victoria_secret | Epic sadface: Sorry, this user has been locked out. |
+      | Username        | Password        | Error message                                                             |
+      | Problem_user    | secret_juice    | Epic sadface: Username and password do not match any user in this service |
+      | unusual_user    | secret_juice    | Epic sadface: Username and password do not match any user in this service |
+      | Iamnot_user     | secret_juice    | Epic sadface: Username and password do not match any user in this service |
+      | 111_222         | Idonot_care     | Epic sadface: Username and password do not match any user in this service |
+      | ''              | ''              | Epic sadface: Username is required                                        |
+      | locked_out_user | victoria_secret | Epic sadface: Username and password do not match any user in this service |
