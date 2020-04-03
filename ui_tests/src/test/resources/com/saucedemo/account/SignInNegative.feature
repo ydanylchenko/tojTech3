@@ -45,5 +45,5 @@ Feature: Sign In
     Given I open start page
     When I set 'locked_out_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
-    And I click 'Sign In' button on Sign in page
-    Then Error message 'Epic sadface: this user name has been locked out ' is available on Sign in page
+    And I click 'Sign In' button on Sign in page expecting failure
+    Then Error message 'Epic sadface: Sorry, this user has been locked out.' is available on Sign in page
