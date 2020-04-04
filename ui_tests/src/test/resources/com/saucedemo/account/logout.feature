@@ -18,6 +18,7 @@ Feature: Logout
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
     Then I click 'ADD TO CART' button on 'Sauce Labs Backpack' product on Products page
+    And I click on cart icon on Header
     And I am on Cart page
     And I click on menu icon on Header
     When I click 'Logout' link on Menu
