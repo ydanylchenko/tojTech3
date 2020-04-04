@@ -53,7 +53,7 @@ Feature: Sign In
     Then   Error message '<Epic sadface: Sorry, this user has been locked out.>' is available on Sign in page
 
     Examples:
-      | username      | password
-      | standard_user | ''
-      | ''            | secret_sauce
-      | locked_out    | secret_sauce
+      | username      | password     |
+      | standard_user | ''           |
+      | ''            | secret_sauce |
+      | locked_out    | secret_sauce |
