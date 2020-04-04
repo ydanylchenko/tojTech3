@@ -9,6 +9,7 @@ Feature: Sign In
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
+    
 
   @signIn
   Scenario: Sign in with invalid password
@@ -17,7 +18,9 @@ Feature: Sign In
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
-
+    When I click on menu icon on Header
+    And  I click 'Logout' link on Menu
+    Then I am on Sign in page
 
   @signIn
   Scenario: Valid user sign in
