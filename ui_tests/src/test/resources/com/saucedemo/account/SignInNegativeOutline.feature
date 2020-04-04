@@ -18,3 +18,5 @@ Feature: Sign In
       | 111_222         | Idonot_care     | Epic sadface: Username and password do not match any user in this service |
       |                 |                 | Epic sadface: Username is required                                        |
       | locked_out_user | victoria_secret | Epic sadface: Username and password do not match any user in this service |
+      | standart_user   |                 | Epic sadface: Password is required                                        |
+      | locked_out_user | secret_sauce    | Epic sadface: Sorry, this user has been locked out.                       |
