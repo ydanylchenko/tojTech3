@@ -88,8 +88,6 @@ public class WebDriverFactory {
                 default:
                     throw new IllegalStateException(browser.getBrowserName() + " is unsupported browser");
             }
-            webDriver.manage().window().setPosition(new Point(0, 0));
-            webDriver.manage().window().setSize(new Dimension(1400, 1400));
         }
         webDriver.manage().timeouts().implicitlyWait(100, TimeUnit.MILLISECONDS);
         return webDriver;
@@ -97,6 +95,7 @@ public class WebDriverFactory {
 
     private static ChromeOptions getChromeOptions(Context context) {
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("window-size=1400,1400");
         options.setExperimentalOption("w3c", false); // For logging purposes
         if (context.isMobile()) {
             Map<String, String> mobileEmulation = new HashMap<>();
