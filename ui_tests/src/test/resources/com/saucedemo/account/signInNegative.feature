@@ -50,6 +50,7 @@ Feature: Sign In
   Scenario Outline : Sign in with '<username>' as username and '<password>' as a password
     When  I set '<username>' as username on Sign in page
     And   I set '<password>' as password on Sign in page
+    And I click 'Sign In' button on Sign in page expecting failure
     Then   Error message '<Epic sadface: Sorry, this user has been locked out.>' is available on Sign in page
 
     Examples:
