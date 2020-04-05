@@ -55,6 +55,6 @@ Feature: Sign In
 
     Examples:
       | username      | password     |
-      | standard_user | ''           |
-      | ''            | secret_sauce |
+      | standard_user |              |
+      |               | secret_sauce |
       | locked_out    | secret_sauce |
