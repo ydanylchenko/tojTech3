@@ -47,13 +47,13 @@ Feature: Sign In
     Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
 
 
-  Scenario Outline : Sign in with '<username>' as username and <password> as a password
+  Scenario Outline : Sign in with '<username>' as username and '<password>' as a password
     When  I set '<username>' as username on Sign in page
     And   I set '<password>' as password on Sign in page
     Then   Error message '<Epic sadface: Sorry, this user has been locked out.>' is available on Sign in page
 
     Examples:
-      | <username>      | <password> |
+      | username      | password     |
       | standard_user | ''           |
       | ''            | secret_sauce |
       | locked_out    | secret_sauce |
