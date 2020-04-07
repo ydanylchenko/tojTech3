@@ -5,7 +5,7 @@ This is selenium based UI test automation framework for both member and recruite
 
 #### Development Environment
 
-1. [Java](https://en.wikipedia.org/wiki/Java_(programming_language) - is used as the main coding language. 
+1. Java - is used as the main coding language. 
 1. [Maven](https://maven.apache.org/) - is used as build and dependencies management tool.  
 1. [Chrome](https://www.google.com/chrome/) - Chrome browser.
 1. [ChromeDriver](https://chromedriver.chromium.org/) - standalone server for Chrome browser that implements the W3C WebDriver standard.
