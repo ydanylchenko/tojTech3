@@ -3,6 +3,7 @@ package com.saucedemo;
 import com.saucedemo.selenium.SeleniumConfig;
 import com.saucedemo.selenium.WaitForAjaxCalls;
 import com.saucedemo.selenium.WebDriverFactory;
+import org.openqa.selenium.WebDriverException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +45,11 @@ public abstract class ModernBasePage {
         LOG.info("{} page loading started", this.getClass().getSimpleName());
         long currentTime = System.currentTimeMillis();
         new WaitForAjaxCalls(getDriver()).checkPendingRequests();
-        isPageOpened();
+        try {
+            isPageOpened();
+        } catch (WebDriverException e) {
+            throw new IllegalStateException(this.getClass().getSimpleName() + " page was not opened!", e.getCause());
+        }
         LOG.info(String.format("%s page loaded in %.1f s on %s url",
                 this.getClass().getSimpleName(),
                 (float) (System.currentTimeMillis() - currentTime) / 1000,
