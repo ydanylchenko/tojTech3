@@ -51,8 +51,10 @@ Feature: Sign In
     And   I click 'Sign In' button on Sign in page expecting failure
     Then  Error message '<Error message>' is available on Sign in page
     Examples:
-    | username | password | Error message |
-    | standart_user |                | Epic sadface: Password is required |
+    | username        | password     | Error message |
+    | standart_user   |              | Epic sadface: Password is required |
     |                 | secret_sauce | Epic sadface: Username is required |
     | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.|
-
+    | standartuser    |              | Epic sadface: Password is required |
+    | standartuser    | secret_sauce | Epic sadface: Epic sadface: Username and password do not match any user in this service |
+    | locked_out_user |              | Epic sadface: Password is required.|
