@@ -12,8 +12,8 @@ Feature: Sign In with Invalid data
 
 
     Examples:
-      | username        | password     | Error message                                                                 |
-      | standard_user   |              | Epic sadface: Password is required                                            |
-      |                 | secret_sauce | Epic sadface: Username is required                                            |
-      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                           |
-      | sjjsjgjgsfsjdjh | ghsdgfhsghfg | EpicEpic sadface: Username and password do not match any user in this service |
+      | username        | password     | Error message                                                             |
+      | standard_user   |              | Epic sadface: Password is required                                        |
+      |                 | secret_sauce | Epic sadface: Username is required                                        |
+      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |
+      | jdhghjghgjdffh  | ghsdgfhsghfg | Epic sadface: Username and password do not match any user in this service |
