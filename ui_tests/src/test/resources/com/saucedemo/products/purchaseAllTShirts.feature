@@ -8,7 +8,7 @@ Feature: Purchase
 
   @purchase
   Scenario: Purchase all the T-shirts
-    When I click 'ADD TO CART' button on ' Labs Bolt T-Shirt' product on Products page
+    When I click 'ADD TO CART' button on 'Sauce Labs Bolt T-Shirt' product on Products page
     Then Cart contains '1' items on Header
     When I click 'ADD TO CART' button on 'Test.allTheThings() T-Shirt (Red)' product on Products page
     Then Cart contains '2' items on Header
