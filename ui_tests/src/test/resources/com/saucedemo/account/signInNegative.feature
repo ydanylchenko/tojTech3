@@ -37,8 +37,8 @@ Feature: Sign In with Invalid Data
 
        Examples:
        |username   |password |
-       | standart_user|  ''  |
-       |  '' |   secret_sauce   |
+       | standart_user|    |
+       |   |   secret_sauce   |
        | locked_out_user  |  secret_sauce    |
 
 
