@@ -1,4 +1,4 @@
-@signIn
+@signIn feature.
 Scenario: Sign in with invalid password
 Given I open start page
 When I set 'standard_user' as username on Sign in page
