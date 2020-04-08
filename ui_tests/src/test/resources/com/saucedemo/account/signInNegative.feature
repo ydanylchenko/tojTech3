@@ -51,7 +51,7 @@ Feature: Sign In
     When  I set '<username>' as username on Sign in page
     And   I set '<password>' as password on Sign in page
     And I click 'Sign In' button on Sign in page expecting failure
-    Then   Error message '<Error message>' is available on Sign in page
+    Then Error message '<Error message>' is available on Sign in page
 
     Examples:
       | username      | password     |Error message|
