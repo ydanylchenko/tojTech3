@@ -17,7 +17,7 @@ Feature: Positive Sign-in
       | performance_glitch_user | secret_sauce |                |
 
   @PositiveSignIn
-  Scenario Outline: Sign-in with valid input for locked user
+  Scenario Outline: Sign-in with valid <username> and <password> to expect an ERROR
     Given I open start page
     When I set '<username>' as username on Sign in page
     And I set '<password>' as password on Sign in page
