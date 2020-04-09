@@ -1,25 +1,21 @@
 @signIn
-Scenario: Sign in with dd username and password
+Scenario: Sign in with ddaa username and password
 Given I open start page
-When I set 'dd' as username on Sign in page
-And I set '' as password on Sign in page
+When I set 'ddaa' as username on Sign in page
+And I set 'ddaa' as password on Sign in page
 And I click 'Sign In' button on Sign in page expecting failure
-Then Error message 'Epic sadface: Username is required' is available on Sign in page
+Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
+
 
 
 @signIn
-Scenario: Sign in with dd password
+Scenario: Sign in with dddd password
 Given I open start page
 When I set 'standard_user' as username on Sign in page
-And I set 'dd' as password on Sign in page
+And I set 'dddd' as password on Sign in page
 And I click 'Sign In' button on Sign in page expecting failure
-Then Error message 'Epic sadface: Password is required' is available on Sign in page
+Then Error message 'Epic sadface: Username and password do not match any user in this service' is available on Sign in page
 
 
-@signIn
-Scenario: Sign in as locked out user
-Given I open start page
-When I set 'locked_out_user' as username on Sign in page
-And I set 'secret_sauce' as password on Sign in page
-And I click 'Sign In' button on Sign in page expecting failure
-Then Error message 'Epic sadface: Sorry, this user has been locked out.' is available on Sign in page
+
+
