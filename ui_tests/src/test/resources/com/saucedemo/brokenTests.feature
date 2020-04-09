@@ -3,13 +3,13 @@ Feature: Mixed Broken Tests
   Scenario: Positive sign in test with standard_user
     Given I open start page
     When I set 'standard_user' as username on Sign in page
-    And I set 'secret_sauce ' as password on Sign in page
+    And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
 
   Scenario: Positive sign in test with performance_glitch_user
     Given I open start page
-    When I set performance_glitch_user as username on Sign in page
+    When I set 'performance_glitch_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
@@ -18,12 +18,12 @@ Feature: Mixed Broken Tests
     Given I open start page
     When I set 'problem_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
-    And I click 'Sign In' button on Sign in page expecting failure
+    And I click 'Sign In' button on Sign in page
     Then I am on Products page
 
   Scenario Outline: Sign in as <user> user
     Given I open start page
-    When I set '<problem_user>' as username on Sign in page
+    When I set '<user>' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
