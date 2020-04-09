@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @signIn
 Scenario: Sign in with ddaa username and password
 Given I open start page
@@ -19,3 +20,7 @@ Then Error message 'Epic sadface: Username and password do not match any user in
 
 
 
+=======
+
+@sign
+>>>>>>> master
