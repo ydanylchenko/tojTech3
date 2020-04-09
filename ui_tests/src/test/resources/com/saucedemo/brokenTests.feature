@@ -57,7 +57,32 @@ Feature: Mixed Fixed Tests
     And  I click 'Logout' link on Menu
     Then I am on Sign in page
 
-  Scenario: Purchase Bike Light T Shirt
+    Scenario: Purchase Bike Light T Shirt
+    Given I open start page
+    And I set 'standard_user' as username on Sign in page
+    And I set 'secret_sauce' as password on Sign in page
+    And I click 'Sign In' button on Sign in page
+    Then I am on Products page
+    And I click 'ADD TO CART' button on 'Sauce Labs Bike Light' product on Products page
+    Then Cart contains '1' items on Header
+    When I click on cart icon on Header
+    Then I am on Cart page
+    And I click 'Checkout' button on Cart page
+    Then I am on Checkout your information page
+    And I set 'John' as first name on Checkout your information page
+    And I set 'Smith' as last name on Checkout your information page
+    And I set '11235' as zip on Checkout your information page
+    And I click 'Continue' button on Checkout your information page
+    Then I am on Checkout overview page
+    And Item total is '9.99' on Checkout overview page
+    And Tax is '0.80' on Checkout overview page
+    And Total is '10.79' on Checkout overview page
+    And I click 'Finish' button on Checkout overview page
+    Then I am on Checkout complete page
+
+               #  OR this scenario below also works
+
+    Scenario: Purchase Bike Light T Shirt
     Given I open start page
     And I set 'standard_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
@@ -78,8 +103,8 @@ Feature: Mixed Fixed Tests
     And I click 'Continue' button on Checkout your information page
     Then I am on Checkout overview page
     And The following products are available on Checkout overview page:
-   |quantity | product              | description                                                                                                                                                     | price |
-   | 1       | Sauce Labs Bike Light| A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included. | 9.99  |
+      |quantity | product              | description                                                                                                                                                     | price |
+      | 1       | Sauce Labs Bike Light| A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included. | 9.99  |
     And Item total is '9.99' on Checkout overview page
     And Tax is '0.80' on Checkout overview page
     And Total is '10.79' on Checkout overview page
