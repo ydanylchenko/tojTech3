@@ -54,6 +54,6 @@ Feature: Sign In
     Then Error message '<errorMessage>' is available on Sign in page
     Examples:
       | username        |  password    | errorMessage |
-      | standard_user   |              | Epic sadface: Password is required.|
-      |                 | secret_sauce | Epic sadface: Username is required.|
+      | standard_user   |              | Epic sadface: Password is required|
+      |                 | secret_sauce | Epic sadface: Username is required|
       | locked_out_user | secret_sauce |Epic sadface: Sorry, this user has been locked out.|
