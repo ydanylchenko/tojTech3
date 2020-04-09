@@ -12,7 +12,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <parallelTestsCount>1</parallelTestsCount>
+        <parallelTestsCount>4</parallelTestsCount>
         <!--Default Logging Settings-->
         <log.level>DEBUG</log.level>
         <log.config>logback.xml</log.config>
