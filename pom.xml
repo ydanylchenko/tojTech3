@@ -12,6 +12,7 @@
     <modules>
         <module>ui_tests</module>
         <module>configuration_reader</module>
+        <module>java_playground</module>
     </modules>
 
     <properties>
@@ -27,7 +28,7 @@
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
         <!--Dependencies-->
         <logback-classic.version>1.2.3</logback-classic.version>
-        <cucumber.version>5.4.1</cucumber.version>
+        <cucumber.version>5.5.0</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
         <jackson.version>2.10.2</jackson.version>
         <testng.version>7.1.0</testng.version>
