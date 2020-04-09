@@ -1,4 +1,4 @@
-Feature e
+Feature
   @signIn
   Scenario: Sign in with empty password
     Given I open start page
