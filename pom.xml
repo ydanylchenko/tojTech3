@@ -12,6 +12,7 @@
     <modules>
         <module>ui_tests</module>
         <module>configuration_reader</module>
+        <module>java_playground</module>
     </modules>
 
     <properties>
