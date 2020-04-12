@@ -52,7 +52,7 @@ Feature: Mixed Broken Tests
     And I click on cart icon on Header
     And I click 'Checkout' button on Cart page
     When I click 'Logout' link on Menu
-    Then I am on Sign in page
+
 
   Scenario: Purchase Bike Light
     Given I open start page
