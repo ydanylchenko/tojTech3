@@ -51,7 +51,7 @@ Feature: Mixed Broken Tests
     And I click 'ADD TO CART' button on 'Sauce Labs Bolt T-Shirt' product on Products page
     And I click on cart icon on Header
     And I click 'Checkout' button on Cart page
-    When I click 'Logout' link on Menu
+    Then I click 'Logout' link on Menu
 
 
   Scenario: Purchase Bike Light
