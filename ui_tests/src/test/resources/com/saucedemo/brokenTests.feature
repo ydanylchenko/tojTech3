@@ -29,7 +29,7 @@ Feature: Mixed Broken Tests
     Then I am on Products page
 
     Examples:
-      | username                | password
+      | username                | password    |
       | problem_user            |secret_sauce |
       | performance_glitch_user |secret_sauce |
 
