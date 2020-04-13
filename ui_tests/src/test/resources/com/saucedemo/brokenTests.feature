@@ -64,7 +64,7 @@ Feature: Mixed Broken Tests
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
-    And I click 'ADD TO CART' button on 'Sauce Labs Bike Light (Red)' product on Products page
+    And I click 'ADD TO CART' button on 'Sauce Labs Bike Light ' product on Products page
     When I click on cart icon on Header
     And I click 'Checkout' button on Cart page
     And I set 'John' as first name on Checkout your information page
@@ -76,3 +76,4 @@ Feature: Mixed Broken Tests
     And Total is '10.79' on Checkout overview page
     And I click 'Finish' button on Checkout overview page
     Then I am on Checkout complete page
+
