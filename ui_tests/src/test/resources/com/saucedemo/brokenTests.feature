@@ -3,7 +3,7 @@ Feature: Mixed Broken Tests
   Scenario: Positive sign in test with standard_user
     Given I open start page
     When I set 'standard_user' as username on Sign in page
-    And I set 'secret_sauce ' as password on Sign in page
+    And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
     Then I am on Products page
 
@@ -38,6 +38,7 @@ Feature: Mixed Broken Tests
     And I set 'standard_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
+    Then I am on Products page
     When I click 'ADD TO CART' button on 'Sauce Labs Bolt T-Shirt' product on Products page
     And I click 'ADD TO CART' button on 'Test.allTheThings() T-Shirt (Red)' product on Products page
     When I click on cart icon on Header
@@ -49,6 +50,7 @@ Feature: Mixed Broken Tests
     And I set 'standard_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
+    Then I am on Products page
     And I click 'ADD TO CART' button on 'Sauce Labs Bolt T-Shirt' product on Products page
     And I click on cart icon on Header
     And I click 'Checkout' button on Cart page
@@ -61,6 +63,7 @@ Feature: Mixed Broken Tests
     And I set 'standard_user' as username on Sign in page
     And I set 'secret_sauce' as password on Sign in page
     And I click 'Sign In' button on Sign in page
+    Then I am on Products page
     And I click 'ADD TO CART' button on 'Sauce Labs Bike Light (Red)' product on Products page
     When I click on cart icon on Header
     And I click 'Checkout' button on Cart page
