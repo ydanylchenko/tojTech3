@@ -2,8 +2,6 @@ package com.saucedemo.pageObjects;
 
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.WebElement;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -12,7 +10,6 @@ import static com.saucedemo.CucumberHooks.getDriver;
 import static com.saucedemo.TestsConfig.getConfig;
 
 public class GlobalSteps {
-    private static final Logger LOG = LoggerFactory.getLogger(GlobalSteps.class);
 
     @Given("^I open start page$")
     public SignInPage openStartPage() {
