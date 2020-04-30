@@ -1,0 +1,25 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <!-- charset required to ensure consistent encoding output across platform -->
+            <charset>UTF-8</charset>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com" level="DEBUG"/>
+    <logger name="org.hibernate.type" level="ERROR" />
+    <logger name="org.hibernate" level="ERROR" />
+
+    <!--
+        By default we only want to know about ERRORs from third party components, e.g.
+        HtmlUnit http://stackoverflow.com/questions/5188118/cant-turn-off-htmlunit-logging-messages
+        Note that running tests in debug mode will get WARN messages from third party components.
+      -->
+    <root level="ERROR">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

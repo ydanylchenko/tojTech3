@@ -13,6 +13,8 @@
         <module>ui_tests</module>
         <module>configuration_reader</module>
         <module>java_playground</module>
+        <module>jenkins_ui_tests</module>
+        <module>empty_ui_tests</module>
     </modules>
 
     <properties>
