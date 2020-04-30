@@ -26,16 +26,10 @@ public abstract class BasePage {
      * object. Use constructor with boolean parameter
      */
     public BasePage() {
-    }
-
-    public BasePage(boolean captureScreenShot) {
         String pageName = this.getClass().getSimpleName();
         getContext().setPageName(pageName);
         LOG.debug("open {}", pageName);
         waitForOpen();
-        if (captureScreenShot && SeleniumConfig.getConfig().getEnableScreenShotsCapture()) {
-            WebDriverFactory.captureScreenshot(getContext(), getDriver(), pageName);
-        }
     }
 
     /**
