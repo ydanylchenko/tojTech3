@@ -21,7 +21,7 @@ public class TestsConfig extends Config {
         PropertiesLoader.populate(this);
     }
 
-    @Property("base.url")
+    @Property("jenkins.base.url")
     private String baseUrl;
 
     /**
