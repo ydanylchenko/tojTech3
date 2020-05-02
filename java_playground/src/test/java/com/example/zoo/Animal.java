@@ -5,7 +5,7 @@ public class Animal {
     int age;
     boolean isHungry = true;
     String cageId = "hostel";
-
+// new Animal()
     Animal() {
     }
 
