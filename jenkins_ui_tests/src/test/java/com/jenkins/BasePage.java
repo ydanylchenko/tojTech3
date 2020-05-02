@@ -44,6 +44,11 @@ public abstract class BasePage {
         } catch (WebDriverException e) {
             throw new IllegalStateException(this.getClass().getSimpleName() + " page was not opened!", e.getCause());
         }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         LOG.info(String.format("%s page loaded in %.1f s on %s url",
                 this.getClass().getSimpleName(),
                 (float) (System.currentTimeMillis() - currentTime) / 1000,
