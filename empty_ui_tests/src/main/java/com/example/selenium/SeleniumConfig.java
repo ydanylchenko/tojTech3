@@ -1,4 +1,4 @@
-package com.jenkins.selenium;
+package com.example.selenium;
 
 import com.ydanylchenko.configuration.reader.Config;
 import com.ydanylchenko.configuration.reader.properties.PropertiesLoader;

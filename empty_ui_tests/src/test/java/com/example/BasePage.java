@@ -1,14 +1,12 @@
-package com.jenkins;
+package com.example;
 
-import com.jenkins.selenium.SeleniumConfig;
-import com.jenkins.selenium.WaitForAjaxCalls;
-import com.jenkins.selenium.WebDriverFactory;
+import com.example.selenium.WaitForAjaxCalls;
 import org.openqa.selenium.WebDriverException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.jenkins.CucumberHooks.getContext;
-import static com.jenkins.CucumberHooks.getDriver;
+import static com.example.CucumberHooks.getContext;
+import static com.example.CucumberHooks.getDriver;
 
 /**
  * This is the main class for page objects
