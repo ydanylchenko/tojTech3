@@ -1,7 +1,7 @@
-package com.jenkins;
+package com.example;
 
-import com.jenkins.context.Context;
-import com.jenkins.selenium.WebDriverFactory;
+import com.example.context.Context;
+import com.example.selenium.WebDriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-import static com.jenkins.selenium.SeleniumConfig.getConfig;
+import static com.example.selenium.SeleniumConfig.getConfig;
 
 public class CucumberHooks {
     private static final Logger LOG = LoggerFactory.getLogger(CucumberHooks.class);

@@ -1,4 +1,4 @@
-package com.jenkins;
+package com.example;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
