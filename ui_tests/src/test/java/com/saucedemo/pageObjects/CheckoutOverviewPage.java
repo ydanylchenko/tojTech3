@@ -1,6 +1,6 @@
 package com.saucedemo.pageObjects;
 
-import com.saucedemo.ModernBasePage;
+import com.saucedemo.BasePage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
@@ -14,14 +14,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static com.saucedemo.CucumberHooks.getContext;
 import static com.saucedemo.CucumberHooks.getDriver;
 import static com.saucedemo.helpers.ElementsInteraction.*;
 import static com.saucedemo.pageObjects.GlobalSteps.getFormattedItems;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.testng.Assert.assertEquals;
 
-public class CheckoutOverviewPage extends ModernBasePage {
+public class CheckoutOverviewPage extends BasePage {
     private static final Logger LOG = LoggerFactory.getLogger(CheckoutOverviewPage.class);
     private static final By FINISH_BUTTON = By.linkText("FINISH");
     private static final By HEADER_FIELD = By.className("subheader");

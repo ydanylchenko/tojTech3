@@ -1,12 +1,12 @@
 package com.saucedemo.pageObjects;
 
-import com.saucedemo.ModernBasePage;
+import com.saucedemo.BasePage;
 import io.cucumber.java.en.And;
 
 import static com.saucedemo.helpers.ElementsInteraction.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
-public class ProductsPage extends ModernBasePage {
+public class ProductsPage extends BasePage {
     private static final String ADD_TO_CART_BUTTON = "//a[.='%s']/../..//button[.='ADD TO CART']";
     private static final String REMOVE_BUTTON = "//a[.='%s']/../..//button[.='REMOVE']";
     public Header header;

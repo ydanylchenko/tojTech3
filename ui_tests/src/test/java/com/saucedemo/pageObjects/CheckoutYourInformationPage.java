@@ -1,13 +1,13 @@
 package com.saucedemo.pageObjects;
 
-import com.saucedemo.ModernBasePage;
+import com.saucedemo.BasePage;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 
 import static com.saucedemo.helpers.ElementsInteraction.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class CheckoutYourInformationPage extends ModernBasePage {
+public class CheckoutYourInformationPage extends BasePage {
     private static final By FIRST_NAME_INPUT = By.id("first-name");
     private static final By LAST_NAME_INPUT = By.id("last-name");
     private static final By ZIP_INPUT = By.id("postal-code");

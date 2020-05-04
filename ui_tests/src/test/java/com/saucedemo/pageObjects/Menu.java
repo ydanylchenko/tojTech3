@@ -1,13 +1,13 @@
 package com.saucedemo.pageObjects;
 
-import com.saucedemo.ModernBasePage;
+import com.saucedemo.BasePage;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 
 import static com.saucedemo.helpers.ElementsInteraction.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class Menu extends ModernBasePage {
+public class Menu extends BasePage {
     private static final By MENU_CONTAINER = By.className("bm-menu");
     private static final By LOGOUT_LINK = By.id("logout_sidebar_link");
 

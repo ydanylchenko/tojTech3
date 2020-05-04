@@ -1,14 +1,13 @@
 package com.saucedemo.pageObjects;
 
-import com.saucedemo.ModernBasePage;
-import io.cucumber.datatable.DataTable;
+import com.saucedemo.BasePage;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 
 import static com.saucedemo.helpers.ElementsInteraction.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
-public class CheckoutCompletePage extends ModernBasePage {
+public class CheckoutCompletePage extends BasePage {
     private static final By HEADER_FIELD = By.className("subheader");
     private static final By MESSAGE_HEADER_FIELD = By.className("complete-header");
     private static final By MESSAGE_FIELD = By.className("complete-text");
