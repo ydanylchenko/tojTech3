@@ -1,13 +1,13 @@
 package com.saucedemo.pageObjects;
 
-import com.saucedemo.ModernBasePage;
+import com.saucedemo.BasePage;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 
 import static com.saucedemo.helpers.ElementsInteraction.*;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
-public class SignInPage extends ModernBasePage {
+public class SignInPage extends BasePage {
     private static final By USERNAME_INPUT = By.id("user-name");
     private static final By PASSWORD_INPUT = By.id("password");
     private static final By LOGIN_BUTTON = By.xpath("//input[@value='LOGIN']");
