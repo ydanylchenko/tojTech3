@@ -15,6 +15,7 @@
         <module>java_playground</module>
         <module>jenkins_ui_tests</module>
         <module>empty_ui_tests</module>
+        <module>udemy_ui_tests</module>
     </modules>
 
     <properties>
