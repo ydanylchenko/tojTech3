@@ -1,19 +1,15 @@
-package com.jenkins.pageObjects;
+package com.facebook.pageObjects;
 
-import com.jenkins.BasePage;
-import com.jenkins.CucumberHooks;
-import com.jenkins.selenium.WaitForAjaxCalls;
-import com.jenkins.util.Helpers;
+import com.facebook.BasePage;
+import com.facebook.CucumberHooks;
+import com.facebook.selenium.WaitForAjaxCalls;
+import com.facebook.util.Helpers;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import static com.jenkins.util.Helpers.*;
+import static com.facebook.util.Helpers.*;
 
 public class DashboardPage extends BasePage {
     public void isPageOpened() {

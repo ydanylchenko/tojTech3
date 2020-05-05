@@ -1,14 +1,12 @@
-package com.jenkins;
+package com.facebook;
 
-import com.jenkins.selenium.SeleniumConfig;
-import com.jenkins.selenium.WaitForAjaxCalls;
-import com.jenkins.selenium.WebDriverFactory;
+import com.facebook.selenium.WaitForAjaxCalls;
 import org.openqa.selenium.WebDriverException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.jenkins.CucumberHooks.getContext;
-import static com.jenkins.CucumberHooks.getDriver;
+import static com.facebook.CucumberHooks.getContext;
+import static com.facebook.CucumberHooks.getDriver;
 
 /**
  * This is the main class for page objects
@@ -38,20 +36,15 @@ public abstract class BasePage {
     protected void waitForOpen() {
         LOG.info("{} page loading started", this.getClass().getSimpleName());
         long currentTime = System.currentTimeMillis();
-        new WaitForAjaxCalls(getDriver()).checkPendingRequests();
+        new WaitForAjaxCalls(getDriver(baseUrl)).checkPendingRequests();
         try {
             isPageOpened();
         } catch (WebDriverException e) {
             throw new IllegalStateException(this.getClass().getSimpleName() + " page was not opened!", e.getCause());
         }
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         LOG.info(String.format("%s page loaded in %.1f s on %s url",
                 this.getClass().getSimpleName(),
                 (float) (System.currentTimeMillis() - currentTime) / 1000,
-                getDriver().getCurrentUrl()));
+                getDriver(baseUrl).getCurrentUrl()));
     }
 }

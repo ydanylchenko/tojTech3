@@ -1,4 +1,4 @@
-package com.jenkins.selenium;
+package com.facebook.selenium;
 
 /**
  * This class represents browsers. For add support of your browser - add it to this enum

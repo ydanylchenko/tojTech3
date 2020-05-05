@@ -1,14 +1,12 @@
-package com.jenkins.pageObjects;
+package com.facebook.pageObjects;
 
-import com.jenkins.BasePage;
-import com.jenkins.CucumberHooks;
-import com.jenkins.selenium.WaitForAjaxCalls;
-import com.jenkins.util.Helpers;
+import com.facebook.BasePage;
+import com.facebook.util.Helpers;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import static com.jenkins.util.Helpers.*;
+import static com.facebook.util.Helpers.*;
 
 public class LoginPage extends BasePage {
     //    public LoginPage() {

@@ -1,4 +1,4 @@
-package com.jenkins.selenium;
+package com.facebook.selenium;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

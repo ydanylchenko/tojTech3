@@ -1,10 +1,8 @@
-package com.jenkins.pageObjects;
+package com.facebook.pageObjects;
 
-import com.jenkins.CucumberHooks;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
-import static com.jenkins.CucumberHooks.getDriver;
+import static com.facebook.CucumberHooks.getDriver;
 
 public class GlobalSteps {
     @When("I open Dashboard page")

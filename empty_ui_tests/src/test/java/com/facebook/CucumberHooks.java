@@ -1,7 +1,7 @@
-package com.jenkins;
+package com.facebook;
 
-import com.jenkins.context.Context;
-import com.jenkins.selenium.WebDriverFactory;
+import com.facebook.context.Context;
+import com.facebook.selenium.WebDriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
-import static com.jenkins.selenium.SeleniumConfig.getConfig;
+import static com.facebook.selenium.SeleniumConfig.getConfig;
 
 public class CucumberHooks {
     private static final Logger LOG = LoggerFactory.getLogger(CucumberHooks.class);
@@ -23,13 +23,17 @@ public class CucumberHooks {
      * Getting of pre-configured {@link WebDriver} instance.
      *
      * @return webdriver object
+     * @param baseUrl
      */
-    public static WebDriver getDriver() {
+    public static WebDriver getDriver(String baseUrl) {
         return driver.get();
     }
 
     public static Context getContext() {
         return context.get();
+    }
+
+    public static void getDriver() {
     }
 
     @Before
@@ -65,11 +69,11 @@ public class CucumberHooks {
         LOG.info("Cucumber shutdown hooks are executed");
         try {
             if (scenario != null && scenario.isFailed()) {
-                LOG.error("URL on witch test was failed {}", getDriver().getCurrentUrl());
+                LOG.error("URL on witch test was failed {}", getDriver(baseUrl).getCurrentUrl());
                 String pageName = getContext().getPageName();
                 {
                     LOG.info("Embedding screenshot");
-                    WebDriverFactory.captureScreenshot(getContext(), getDriver(), pageName);
+                    WebDriverFactory.captureScreenshot(getContext(), getDriver(baseUrl), pageName);
                     getContext().storeCapturedScreenshot(true);
                     scenario.embed(getContext().getScreenshots().lastEntry().getValue(),
                             "image/png",
@@ -78,7 +82,7 @@ public class CucumberHooks {
                 }
                 {
                     LOG.info("Logging network errors");
-                    getDriver()
+                    getDriver(baseUrl)
                             .manage()
                             .logs()
                             .get("driver")
@@ -94,7 +98,7 @@ public class CucumberHooks {
                 getContext().storeCapturedScreenshot();
             }
         } finally {
-            WebDriverFactory.finishBrowser(getContext(), getDriver());
+            WebDriverFactory.finishBrowser(getContext(), getDriver(baseUrl));
             driver.remove();
             context.remove();
         }

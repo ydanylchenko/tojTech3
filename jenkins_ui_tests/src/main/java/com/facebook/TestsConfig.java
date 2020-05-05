@@ -1,4 +1,4 @@
-package com.jenkins;
+package com.facebook;
 
 import com.ydanylchenko.configuration.reader.Config;
 import com.ydanylchenko.configuration.reader.properties.PropertiesLoader;

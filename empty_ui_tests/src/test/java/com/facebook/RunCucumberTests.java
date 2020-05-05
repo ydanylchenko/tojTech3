@@ -1,4 +1,4 @@
-package com.jenkins;
+package com.facebook;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
