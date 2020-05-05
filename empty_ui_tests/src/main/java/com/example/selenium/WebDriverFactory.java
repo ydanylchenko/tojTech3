@@ -89,7 +89,7 @@ public class WebDriverFactory {
                     throw new IllegalStateException(browser.getBrowserName() + " is unsupported browser");
             }
         }
-        webDriver.manage().timeouts().implicitlyWait(100, TimeUnit.MILLISECONDS);
+        webDriver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
         return webDriver;
     }
 
