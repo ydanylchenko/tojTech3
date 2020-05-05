@@ -1,6 +1,6 @@
 package com.saucedemo.pageObjects;
 
-import com.saucedemo.ModernBasePage;
+import com.saucedemo.BasePage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -18,7 +18,7 @@ import static com.saucedemo.pageObjects.GlobalSteps.getFormattedItems;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.testng.Assert.assertEquals;
 
-public class CartPage extends ModernBasePage {
+public class CartPage extends BasePage {
     private static final Logger LOG = LoggerFactory.getLogger(CartPage.class);
     private static final By CHECKOUT_BUTTON = By.className("checkout_button");
     private static final By HEADER_FIELD = By.className("subheader");

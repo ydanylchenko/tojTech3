@@ -1,4 +1,4 @@
-package com.jenkins.selenium;
+package com.udemy.selenium;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

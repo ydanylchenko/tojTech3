@@ -13,8 +13,8 @@ import static com.saucedemo.CucumberHooks.getDriver;
 /**
  * This is the main class for page objects
  */
-public abstract class ModernBasePage {
-    private static final Logger LOG = LoggerFactory.getLogger(ModernBasePage.class);
+public abstract class BasePage {
+    private static final Logger LOG = LoggerFactory.getLogger(BasePage.class);
 
     /**
      * checks is page opened
@@ -25,10 +25,10 @@ public abstract class ModernBasePage {
      * This constructor is just for the internal Cucumber use as on first call of a step from any page
      * object. Use constructor with boolean parameter
      */
-    public ModernBasePage() {
+    public BasePage() {
     }
 
-    public ModernBasePage(boolean captureScreenShot) {
+    public BasePage(boolean captureScreenShot) {
         String pageName = this.getClass().getSimpleName();
         getContext().setPageName(pageName);
         LOG.debug("open {}", pageName);

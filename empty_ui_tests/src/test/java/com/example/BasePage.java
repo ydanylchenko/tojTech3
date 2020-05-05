@@ -1,14 +1,12 @@
-package com.jenkins;
+package com.example;
 
-import com.jenkins.selenium.SeleniumConfig;
-import com.jenkins.selenium.WaitForAjaxCalls;
-import com.jenkins.selenium.WebDriverFactory;
+import com.example.selenium.WaitForAjaxCalls;
 import org.openqa.selenium.WebDriverException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.jenkins.CucumberHooks.getContext;
-import static com.jenkins.CucumberHooks.getDriver;
+import static com.example.CucumberHooks.getContext;
+import static com.example.CucumberHooks.getDriver;
 
 /**
  * This is the main class for page objects
@@ -17,13 +15,15 @@ public abstract class BasePage {
     private static final Logger LOG = LoggerFactory.getLogger(BasePage.class);
 
     /**
-     * checks is page opened
+     * Checks if page opened
+     * This method is executed whenever new object of class is created.
+     * It's done by calling the method in constructor of BasePage class
      */
     public abstract void isPageOpened();
 
     /**
-     * This constructor is just for the internal Cucumber use as on first call of a step from any page
-     * object. Use constructor with boolean parameter
+     * This constructor is called whenever a page object of a class that extends base page is created (instantiated)
+     * by calling waitForOpen() method that is calling Page specific isPageOpened() method
      */
     public BasePage() {
         String pageName = this.getClass().getSimpleName();

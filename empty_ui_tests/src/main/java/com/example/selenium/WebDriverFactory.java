@@ -1,6 +1,6 @@
-package com.jenkins.selenium;
+package com.example.selenium;
 
-import com.jenkins.context.Context;
+import com.example.context.Context;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,7 +28,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static com.jenkins.selenium.SeleniumConfig.getConfig;
+import static com.example.selenium.SeleniumConfig.getConfig;
 
 /**
  * Base class for web tests. It contains web driver {@link WebDriver} instance, used in all tests.
