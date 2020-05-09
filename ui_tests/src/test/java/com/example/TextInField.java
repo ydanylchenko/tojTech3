@@ -37,7 +37,6 @@ public class TextInField {
         String userName;
         userName = driver.findElement(By.className("p-nickname")).getText();
         System.out.println(userName);
-        driver.quit();
     }
 
     @Test
@@ -52,6 +51,5 @@ public class TextInField {
         driver.findElement(By.name("q")).sendKeys("myCoolRepo");
         System.out.println("Execution of getText method: '" + driver.findElement(By.name("q")).getText() + "'"); // not text
         System.out.println("Execution of getAttribute 'value' method: '" + driver.findElement(By.name("q")).getAttribute("value") + "'"); // myCoolRepo
-        driver.quit();
     }
 }
