@@ -45,6 +45,17 @@ public class ActionsTest {
     }
 
     @Test
+    public void actionsDragAndDropTestChained() throws InterruptedException {
+        driver.get("https://kleki.com/");
+        Thread.sleep(2000);
+        Actions action = new Actions(driver);
+        action.moveByOffset(100, 100).clickAndHold().moveByOffset(200, 200).release().perform();
+    //        The action is now created, we can perform it
+
+        Thread.sleep(5000);
+    }
+
+    @Test
     public void actionHoverTest() throws InterruptedException {
         driver.get("https://www.theladders.com/");
         Thread.sleep(5000);
