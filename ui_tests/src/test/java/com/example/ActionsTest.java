@@ -23,8 +23,6 @@ public class ActionsTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.get("https://kleki.com/");
-        Thread.sleep(2000);
     }
 
     @AfterMethod
@@ -33,13 +31,25 @@ public class ActionsTest {
     }
 
     @Test
-    public void actionsTest() throws InterruptedException {
+    public void actionsDragAndDropTest() throws InterruptedException {
+        driver.get("https://kleki.com/");
+        Thread.sleep(2000);
         Actions action = new Actions(driver);
         action.moveByOffset(100, 100);
         action.clickAndHold();
         action.moveByOffset(200, 200);
         action.release();
+//        The action is now created, we can perform it
         action.perform();
+        Thread.sleep(5000);
+    }
+
+    @Test
+    public void actionHoverTest() throws InterruptedException {
+        driver.get("https://www.theladders.com/");
+        Thread.sleep(5000);
+        new Actions(driver).moveToElement(driver.findElement(By.id("guest-jobs"))).perform();
+        new Actions(driver).moveToElement(driver.findElement(By.className("companies"))).perform();
         Thread.sleep(5000);
     }
 }
