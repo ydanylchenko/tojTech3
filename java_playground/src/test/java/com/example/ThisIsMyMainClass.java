@@ -1,8 +1,11 @@
 package com.example;
 
-public class ThisIsMyMainClass {
-    public static void main(String[] args) {
-//        Your code goes here, e.g.:
-        System.out.println("Hello TojTech World!");
+class Operator {
+    public static void main(String[] args){
+     String country = "tajkistan";
+     String word = country.toUpperCase();
+        System.out.println(word);
+        System.out.println("He said \"Hello world\"");
+        System.out.println("Books\nMagazines");
     }
 }
