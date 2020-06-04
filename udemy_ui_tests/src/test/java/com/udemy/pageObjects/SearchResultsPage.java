@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static com.udemy.helpers.ElementsInteraction.click;
 import static com.udemy.helpers.ElementsInteraction.getWait;
 
+
 /**
  * Name of the page represents the web page name.
  * It extends the BasePage abstract class that implements common logic for page loading.

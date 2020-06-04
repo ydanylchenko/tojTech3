@@ -1,5 +1,6 @@
 package com.example;
 
+import io.cucumber.java.en_old.Ac;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -61,6 +62,16 @@ public class ActionsTest {
         Thread.sleep(5000);
         new Actions(driver).moveToElement(driver.findElement(By.id("guest-jobs"))).perform();
         new Actions(driver).moveToElement(driver.findElement(By.className("companies"))).perform();
+        new Actions(driver).moveToElement(driver.findElement(By.linkText("Wells Fargo Jobs"))).click();
+        Thread.sleep(5000);
+    }
+
+    @Test
+    public void actionHoverResumeTest() throws InterruptedException {
+        driver.get("https://www.theladders.com/");
+        Thread.sleep(5000);
+        new Actions(driver).moveToElement(driver.findElement(By.xpath("//a[@data-qaid=\"lgn-member-resume\"]"))).perform();
+        driver.findElement(By.linkText("My Resume")).click();
         Thread.sleep(5000);
     }
 }
