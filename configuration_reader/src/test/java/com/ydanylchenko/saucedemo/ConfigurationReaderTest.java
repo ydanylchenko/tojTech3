@@ -21,3 +21,4 @@ public class ConfigurationReaderTest {
         assertEquals(getConfig().getOverwrittenEnvironmentProperty(), "overwrittenEnvironmentPropertyValue");
     }
 }
+
