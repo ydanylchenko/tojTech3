@@ -35,7 +35,7 @@
         <selenium.version>3.141.59</selenium.version>
         <jackson.version>2.10.2</jackson.version>
         <testng.version>7.1.0</testng.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
     </properties>
 
     <build>
