@@ -33,7 +33,7 @@
         <logback-classic.version>1.2.3</logback-classic.version>
         <cucumber.version>5.5.0</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
-        <jackson.version>2.10.2</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
         <testng.version>7.1.0</testng.version>
         <commons-io.version>2.6</commons-io.version>
     </properties>
